@@ -17,7 +17,7 @@ local definePushButton = BIOS.util.definePushButton
 local defineIntegerFromGetter = BIOS.util.defineIntegerFromGetter
 
 
-function BIOS.util.define3Pos2CommandSwitchWW2(msg, device_id, switch1, switch2, arg_number, category, description)
+function define3Pos2CommandSwitchWW2(msg, device_id, switch1, switch2, arg_number, category, description)
 	local alloc = moduleBeingDefined.memoryMap:allocateInt{ maxValue = 2 }
 	moduleBeingDefined.exportHooks[#moduleBeingDefined.exportHooks+1] = function(dev0)
 	    local val = dev0:get_argument_value(arg_number)
